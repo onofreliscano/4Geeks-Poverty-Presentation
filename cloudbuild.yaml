@@ -2,6 +2,7 @@ options:
   logging: CLOUD_LOGGING_ONLY
 
 steps:
+  # 1️⃣ Build image
   - name: 'gcr.io/cloud-builders/docker'
     args:
       [
@@ -10,6 +11,15 @@ steps:
         '.'
       ]
 
+  # 2️⃣ Push image to Artifact Registry  ← ESTA ES LA CLAVE
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'push',
+        'us-central1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/poverty-presentation:$COMMIT_SHA'
+      ]
+
+  # 3️⃣ Deploy to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
     args:
@@ -18,7 +28,6 @@ steps:
         '--image','us-central1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/poverty-presentation:$COMMIT_SHA',
         '--region','us-central1',
         '--platform','managed'
-        #'--allow-unauthenticated'
       ]
 
 images:
