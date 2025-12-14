@@ -1,0 +1,9 @@
+# Ignore git metadata
+.git
+.gitignore
+
+# Ignore CI config
+.github
+
+# Ignore local dependencies
+node_modules
