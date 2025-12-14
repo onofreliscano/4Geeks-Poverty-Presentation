@@ -1,0 +1,82 @@
+/* =========================
+   4Geeks Poverty – Cover
+   Stable Reveal.js Layout
+   ========================= */
+
+/* Base */
+.reveal {
+  background: #FDB515;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  color: #ffffff;
+}
+
+/* Remove default padding */
+.reveal section {
+  padding: 0;
+}
+
+/* Center container */
+.cover-wrapper {
+  width: 88%;
+  height: 80%;
+  margin: auto;
+  display: flex;
+  background: transparent;
+}
+
+/* Left block */
+.cover-left {
+  width: 38%;
+  background: #ffffff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cover-left img.logo {
+  width: 160px;
+}
+
+.cover-left img.family {
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Right block */
+.cover-right {
+  width: 62%;
+  background: #F47C3C;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cover-right h1 {
+  font-size: 3.2rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.cover-right h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0.5rem 0 2rem;
+}
+
+/* Team list */
+.cover-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cover-right li {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.cover-right li::before {
+  content: "◆ ";
+}

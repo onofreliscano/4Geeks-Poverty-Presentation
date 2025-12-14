@@ -1,0 +1,15 @@
+# Node / temp
+node_modules/
+npm-debug.log
+
+# OS
+.DS_Store
+
+# Obsidian
+.obsidian/
+
+# Local backups
+olds/
+
+# Optional: keep if you want clean repo
+# export/ (comment this if you WANT export in repo)
