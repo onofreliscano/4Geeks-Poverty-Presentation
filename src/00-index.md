@@ -55,6 +55,13 @@ Se requiere un modelo escalable, reproducible y explicable que permita:
  Mejor toma de decisiones basada en predicciones confiables. Así como reducción de error frente a enfoques manuales o heurísticos. Y que tenga capacidad de adaptación a diferentes mercados/países.
 
 ---
+## MLOps & Arquitectura
+
+---
+
+**El proyecto fue diseñado con un enfoque de MLOps ligero, priorizando reproducibilidad, despliegue y consumo real del modelo.**
+
+---
 ## ¿Cómo se recopilaron los datos?
 
 ---
@@ -81,13 +88,13 @@ Los datos fueron consolidados y validados en un entorno controlado, asegurando c
 
 ---
 
-**Se utiliza el Poverty Probability Index (PPI), un indicador reconocido internacionalmente que combina:**
-
----
-
 <div style="text-align: left;">
-- Características del hogar. 
+
+
+- Características del hogar.   
+
 - Posesión de activos. 
+
 - Condiciones socioeconómicas clave.  
 </div>
  
@@ -101,11 +108,16 @@ Los datos fueron consolidados y validados en un entorno controlado, asegurando c
 
 ---
 
-La actividad financiera es limitada:  
+
+
 <div style="text-align: left;">
-- En promedio 1–2 interacciones financieras al año.  
-- 
+Actividad financiera  
+
+
+- En promedio 1–2 interacciones financieras al año. 
+
 - Bajo uso de instituciones financieras formales.
+
 </div>
 
 ---
@@ -118,7 +130,7 @@ La actividad financiera es limitada:
 
 ---
 
-**Existen diferencias estructurales entre países, lo que justifica un modelo no lineal (XGBoost) y el uso de modelos globales y específicos por país.**
+Existen diferencias estructurales entre países, lo que justifica un modelo no lineal (XGBoost) y el uso de modelos globales y específicos por país.
 
 ---
 
