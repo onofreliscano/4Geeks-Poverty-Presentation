@@ -20,41 +20,157 @@
           <textarea data-template>
             
 
-# POVERTY PREDICTION x
+# POVERTY PREDICTION 
 ### Final project, Dic 19th 2025
 
 ---
-
 ## Team
+---
 
-- Juan Felipe  
+
+<div style="text-align: left;">
+
+- Juan Felipe Ríos  
 - Onofre Liscano  
-- Yuseff  
-- Javier Eduardo
+- Yuseff Nesme  
+- Javier Eduardo Reyes  
+
+</div>
 
 ---
 
-## Problem
-
-Describe the problem here.
+## Objetivo del proyecto
 
 ---
 
-## Data
-
-World Bank + Surveys
+Desarrollar un modelo de Machine Learning capaz de predecir una variable objetivo continua (problema de regresión).
 
 ---
 
-## Model
-
-XGBoost Classifier
+Esto a partir de múltiples características numéricas, categóricas y booleanas, considerando diferencias estructurales entre países.
 
 ---
 
-## Conclusion
+Se requiere un modelo escalable, reproducible y explicable que permita:
 
-Main takeaways and next steps.
+---
+
+<div style="text-align: left;">
+
+- Generar predicciones precisas sobre nuevos datos  
+- Comparar desempeño global vs. modelos específicos por país 
+- Facilitar su despliegue en una aplicación web para consumo del negocio.
+
+</div>
+
+---
+## Impacto esperado
+
+---
+
+ Mejor toma de decisiones basada en predicciones confiables. Así como reducción de error frente a enfoques manuales o heurísticos. Y que tenga capacidad de adaptación a diferentes mercados/países.
+
+---
+## ¿Cómo se recopilaron los datos?
+
+---
+
+El análisis se basa en un dataset público de 12,600 individuos en 7 países, obtenido de Kaggle y provisto por datasciencecapstone.org.
+
+---
+
+La información proviene de encuestas a nivel hogar enfocadas en condiciones socioeconómicas e inclusión financiera.
+
+---
+
+**Se utiliza el Poverty Probability Index (PPI), un indicador reconocido internacionalmente que combina:**
+
+---
+
+Características del hogar.      
+Posesión de activos.      
+Condiciones socioeconómicas clave.
+
+---
+
+Los datos fueron consolidados y validados en un entorno controlado, asegurando consistencia, trazabilidad y confiabilidad para el análisis y la modelación.
+
+---
+
+**Se utiliza el Poverty Probability Index (PPI), un indicador reconocido internacionalmente que combina:**
+
+---
+
+<div style="text-align: left;">
+- Características del hogar. 
+- Posesión de activos. 
+- Condiciones socioeconómicas clave.  
+</div>
+ 
+---
+## **Principales patrones y hallazgos encontrados.**
+
+---
+
+**El análisis se realizó sobre 12,600 registros y 59 variables, combinando información demográfica, socioeconómica y financiera.**
+
+
+---
+
+La actividad financiera es limitada:  
+<div style="text-align: left;">
+- En promedio 1–2 interacciones financieras al año.  
+- 
+- Bajo uso de instituciones financieras formales.
+</div>
+
+---
+
+**El endeudamiento es poco frecuente, pero las tasas de interés muestran alta variabilidad, reflejando mercados heterogéneos.**
+
+---
+
+**Los individuos enfrentan shocks económicos moderados, que se asocian con mayor uso de servicios financieros.**
+
+---
+
+**Existen diferencias estructurales entre países, lo que justifica un modelo no lineal (XGBoost) y el uso de modelos globales y específicos por país.**
+
+---
+
+**Variables como edad, educación, actividad financiera previa y shocks económicos destacan como las más relevantes (confirmado con SHAP).**
+
+ 
+---
+## **Algoritmo: Modelo y enfoque**
+
+---
+
+**Se empleó un modelo de regresión XGBoost, integrado en un pipeline completo de preprocesamiento y entrenamiento.**
+
+---
+
+El enfoque combina un modelo global y modelos específicos por país, permitiendo capturar diferencias estructurales entre mercados.  
+
+---
+
+La optimización de hiperparámetros se realizó mediante validación cruzada para asegurar estabilidad y generalización.
+
+---
+## Resultados de validación (modelo optimizado)
+---
+
+**El modelo obtuvo un error cuadrático medio (MSE) de 0.033, lo que indica una desviación promedio baja respecto a los valores reales.**
+
+---
+
+**El RMSE de 0.183 confirma que el nivel de error se mantiene controlado y en una escala consistente con la variable objetivo.**
+
+---
+
+**El R² de 0.596 muestra que el modelo explica aproximadamente 60% de la variabilidad observada en los datos.**
+
+---
 
           </textarea>
         </section>
